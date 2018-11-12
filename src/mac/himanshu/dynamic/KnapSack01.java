@@ -6,7 +6,7 @@ package mac.himanshu.dynamic;
  * Intuition : to divide the knapsack weight across multiple knapsacks and consider every item and check if that item can fit into that knapsack
  * if yes then take the Max of(the current value excluding the new item , the value of the new item + the value of the remainder weight if any)) 
  * 1. Let T[i][j] store the max value of the i'th weight in the j'th knapsack.																																						
- * 
+ * NOTE : I LOOK UP ON ONE OF THE ROWS ABOVE TO FULL UP THE REMAINING KNAPSACK BECAUSE, I HAVE JUST ONE QUANTITY OF EACH
  * @author himanshuchhabra
  *
  */
@@ -35,7 +35,7 @@ public class KnapSack01 {
 					
 					if (weights[i-1] <= j) {
 						
-						T[i][j] = Math.max(T[i - 1][j], values[i-1] + T[i-1][j-weights[i-1]]);
+						T[i][j] = Math.max(T[i - 1][j], values[i-1] + T[i-1][j-weights[i-1]]);// exluding , including (its own value + remainder from above row as single instance of each item)
 						
 					} 
 					else {

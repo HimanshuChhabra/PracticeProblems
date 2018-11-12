@@ -1,5 +1,11 @@
 package mac.himanshu.tree;
 
+/**
+ * First common node in the ancistors of the given node
+ * https://www.youtube.com/watch?v=F-_1sbnPbWQ
+ * @author himanshuchhabra
+ *
+ */
 public class LongestCommonAncestor {
 
 	public static void main(String[] args) {

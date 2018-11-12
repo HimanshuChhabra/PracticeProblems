@@ -5,8 +5,10 @@ package mac.himanshu.dynamic;
  * 
  * Intuition : to divide the knapsack weight across multiple knapsacks and consider every item and check if that item can fit into that knapsack
  * if yes then take the Max of(the current value excluding the new item , the value of the new item + the value of the remainder weight if any)) 
- * 1. Let T[i][j] store the max value of the i'th weight in the j'th knapsack.																																						
- * 
+ * 1. Let T[i][j] store the max value incuding all ith pieces till rod length j																																						
+  *NOTE : I LOOK UP ON ONE OF THE SAME ROW WHILE INCLUDING THE NEW LENGTH ROD, BEACUSE I HAVE INFINITE SUPPY OF RODS
+  *
+  *Given length of rods, form a rod of a particular length such that max profit is achieved.
  * @author himanshuchhabra
  *
  */
@@ -18,7 +20,7 @@ public class CuttingRodProblem {
 		int rodLengths[] = {1,2,3,4}; // this should be sorted
 		int values[] = {2,5,9,6};
 
-		int target = 5;
+		int target = 5;		// form a rod of size 5
 		
 		int T[][] = new int[rodLengths.length+1][target + 1];
 
@@ -33,7 +35,7 @@ public class CuttingRodProblem {
 					
 					if (rodLengths[i-1] <= j) {
 						
-						T[i][j] = Math.max(T[i - 1][j], values[i-1] + T[i][j-rodLengths[i-1]]);
+						T[i][j] = Math.max(T[i - 1][j], values[i-1] + T[i][j-rodLengths[i-1]]); //exluding , including (its own value + remainder from above row as infinite instances of each item)
 						
 					} 
 					else {

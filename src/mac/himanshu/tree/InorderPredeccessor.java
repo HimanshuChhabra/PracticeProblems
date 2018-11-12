@@ -1,5 +1,10 @@
 package mac.himanshu.tree;
-
+/**
+ * One simple way is to generate inorder of the tree and then search for the node and return previous node and for successor return
+ * next node;
+ * @author himanshuchhabra
+ *
+ */
 public class InorderPredeccessor {
 
 	public static void main(String[] args) {
@@ -27,14 +32,23 @@ public class InorderPredeccessor {
 		Node n9 = new Node(80);
 		n2.leftNode = n9;
 		
-		Node ans = findPredeccesor(root, 16);
+		Node ans = findPredecesor(root, 16);
 		if(ans != null)
 			System.out.println(ans.data);
 		else
 			System.out.println("Not found");
 	}
-
-	public static Node findPredeccesor(Node root, int value) {
+// before
+	/**
+	 * Locate the node in the tree, If it was not located root will be null, return null
+	 * if found and leftsubtree exists, find the right most child node of the left subtree
+	 * else return the previous node ; We keep track of the previous node, from where we took a right turn because thats
+	 * the predecesor
+	 * @param root
+	 * @param value
+	 * @return
+	 */
+	public static Node findPredecesor(Node root, int value) {
 		Node previous = null;
 		if (root != null) {
 
@@ -49,7 +63,7 @@ public class InorderPredeccessor {
 
 			if(root != null) {
 				if(root.leftNode != null) {
-					return getPredeccessor(root.leftNode);
+					return getPredecessor(root.leftNode);
 				}else
 					return previous;
 			}
@@ -58,7 +72,7 @@ public class InorderPredeccessor {
 		return null;
 	}
 
-	private static Node getPredeccessor(Node nodeValue) {
+	private static Node getPredecessor(Node nodeValue) {
 		
 		while(nodeValue.rightNode != null)
 			nodeValue = nodeValue.rightNode;

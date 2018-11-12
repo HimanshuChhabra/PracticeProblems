@@ -4,6 +4,7 @@ import java.util.*;
 
 public class ArrayIntersection {
 
+	// Sorted array
 	public static void main(String[] args) {
 
 		int arr1[] = {2,6,9,11,13,17};
@@ -29,6 +30,23 @@ public class ArrayIntersection {
 			}
 		}
 		System.out.println(result);
+		
+		//code(2437,875);
 	}
+// Visa question
+	public static void code(int a , int b) {
+		int x = a ;
+		int y = b;
+		
+		while(x != y){
+			if(x > y) {
+				x = x -y;
+			}else if(x < y) {
+				y = y - x;
+			}
+		}
+		
+		System.out.println(x);
 
+	}
 }

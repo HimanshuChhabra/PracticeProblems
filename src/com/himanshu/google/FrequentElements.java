@@ -8,7 +8,7 @@ public class FrequentElements {
 	 * Kth frequent element to be located. O(nlogn) solution , Better can be
 	 * achieved using heaps Main purpose is to understand how you can sort a Map
 	 * based on values. if it was sorting with regards to keys, I would have used
-	 * Tree Map.
+	 * Tree Map and passed comparator.
 	 * 
 	 * 1.What if you are using a class which is not implementing Comparable interface , what if it is a third party library.
 	 * you need a mechanism to specify your custom sort.

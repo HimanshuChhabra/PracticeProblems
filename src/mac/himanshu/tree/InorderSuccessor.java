@@ -35,6 +35,14 @@ public class InorderSuccessor {
 			System.out.println("Not found");
 	}
 
+	/**
+	 * Locate the node,
+	 * if right subtree exists , find its leftMost node , this will be the successor
+	 * if it does not exist , the previous node will be the successor
+	 * @param root
+	 * @param value
+	 * @return
+	 */
 	public static Node findSuccessor(Node root, int value) {
 		Node previous = null;
 		while (root != null && root.data != value) {
@@ -56,9 +64,7 @@ public class InorderSuccessor {
 		return null;
 	}
 
-	// Case 1 , when it has right sub-tree , find the least form the right sub -
-	// tree which is the left most node
-	// Case 2, When it does not have a right sub-tree , store the last left.
+
 	
 	private static Node getSuccessor(Node nodeFound) {
 			while (nodeFound.leftNode != null)

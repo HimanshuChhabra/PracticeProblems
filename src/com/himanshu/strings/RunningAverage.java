@@ -8,7 +8,7 @@ public class RunningAverage {
 
 	public static void main(String[] args) {
 		int input[] = { 1, 2, 3, 4, 5, 6 };
-		int range = 6;
+		int range = 3;
 
 		for (int i = 0; i < input.length; i++) {
 			if(input.length < i + range )

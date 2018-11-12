@@ -1,10 +1,19 @@
 package mac.himanshu.dynamic;
 
+import java.util.*;
+
+/**
+ * Value from up is remove, value from left is insert, value from diagonal is replace
+ * When we  have i == j also char at these indexes are same, we copy from diagonal of upper cell incurring no cost
+ * otherwise we take min of three and add one, incurring 1 cost
+ * @author himanshuchhabra
+ *
+ */
 public class MinimumEditDistance {
 
 	public static void main(String[] args) {
-		String str1 = "aaa";
-		String str2 = "aab";
+		String str1 = "horse";
+		String str2 = "ros";
 
 		// cache to store the minimum number of operation of all intermediate
 		// considerations
@@ -25,7 +34,9 @@ public class MinimumEditDistance {
 				}
 			}
 		}
-
+		Queue<Integer> q = new LinkedList<Integer>();
+		
+		
 		for (int i[] : cache) {
 			for (int j : i)
 				System.out.print(j+" ");

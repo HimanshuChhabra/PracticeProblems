@@ -1,6 +1,7 @@
 package com.himanshu.google;
 
 import java.util.*;
+import java.util.Map.Entry;
 
 public class Solution {
 	
@@ -18,8 +19,8 @@ public class Solution {
 		
 		Map<String,Integer> map = new HashMap<>();
 		
-		map.containsKey("");
-		map.containsValue(1);
+		map.put("ball", 2);
+		map.put("apple", 3);
 		
 		map.keySet();
 		Collection<Integer> ss = map.values();
@@ -33,6 +34,20 @@ public class Solution {
 			entry.getValue();
 		}
 		
+		List<Map.Entry<String, Integer>>  reg = new ArrayList<>(map.entrySet());
 		
+		System.out.println(reg);
+		
+		Collections.sort(reg,new Comparator<Map.Entry<String,Integer>>() {
+
+			@Override
+			public int compare(Entry<String, Integer> o1, Entry<String, Integer> o2) {
+				return o1.getKey().compareTo(o2.getKey());
+				
+			}
+
+			
+		});
+		System.out.println(reg);
 	}
 }

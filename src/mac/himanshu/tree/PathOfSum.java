@@ -61,7 +61,25 @@ public class PathOfSum {
 		Node n9 = new Node(80);
 		n2.leftNode = n9;
 
-		System.out.println(getSumPath(root, 220));
+		System.out.println(getSumPath(root, 80)); // prints any intermediate path
+		System.out.println(leafPath(root,90 )); // prints root to leaf
+	}
+	
+	static int total = 0;
+	public static boolean leafPath(Node root, int sum) {
+		if(root == null)
+			return false;
+		total+=root.data;
+		
+		if(root.leftNode == null && root.rightNode == null && total == sum)
+			return true;
+		
+		boolean result1 = leafPath(root.leftNode, sum);
+		boolean result2 = leafPath(root.rightNode, sum);
+		
+		total-=root.data;
+		
+		return result1 || result2;
 	}
 
 }

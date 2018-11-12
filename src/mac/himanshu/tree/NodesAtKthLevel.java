@@ -36,8 +36,9 @@ public class NodesAtKthLevel {
 		List<Node> nodes = findNodesAtLevel(root, 3);
 
 		for (Node node : nodes)
-			System.out.println(node.data);
+			System.out.print(node.data + " ");
 		
+		System.out.println();
 		findNodes(root, 3);
 
 	}

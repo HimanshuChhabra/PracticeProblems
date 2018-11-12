@@ -6,7 +6,7 @@ public class KFrequentWords {
 
 	public static void main(String[] args) {
 		String[] words = { "the", "day", "is", "sunny", "the", "the", "the", "sunny", "is", "is" };
-		int k = 4;
+		int k = 3;
 		List<String> topK = findKFrequentWords(words, k);
 		System.out.println(topK);
 	}

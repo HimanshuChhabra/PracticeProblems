@@ -22,7 +22,7 @@ public class StaircaseProblem {
 		// time
 		int steps = 2;
 		// How many ways to reach step number 6
-		int target = 3;
+		int target = 2;
 
 		int S[] = new int[target+1];
 

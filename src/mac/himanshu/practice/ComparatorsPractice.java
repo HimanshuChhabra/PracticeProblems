@@ -6,10 +6,10 @@ public class ComparatorsPractice {
 
 	public static void main(String[] args) {
 		ArrayList<String> al = new ArrayList<String>();
-		al.add("abcd");
+		al.add("ab");
 		al.add("c");
-		al.add("aa");
 		al.add("bc");
+		al.add("aa");
 		al.add("bb");  
 		al.add("ba");
 		System.out.println("Not sorted "+ al);
@@ -17,6 +17,17 @@ public class ComparatorsPractice {
 		System.out.println("Sort by length "+al);
 		Collections.sort(al, new SortString()); // sorts wrt to alphabets after length 
 		System.out.println("Sort by alpha "+al);
+		
+		
+		Comparator<Integer> comp = Collections.reverseOrder();
+		Integer a[] = {5,2,3,4};
+		Arrays.sort(a, (i , j) -> {
+		return (i - j);	
+		});
+		
+		Arrays.sort(a, (i,j) -> i -j);
+		
+		System.out.println(Arrays.deepToString(a));
 
 	}
 }

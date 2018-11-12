@@ -22,19 +22,22 @@ public class ParenthesisMatching {
 				}
 			}
 
-		}
+		} 
 
 		return true;
 	}
 
 	public static void main(String[] args) {
 		Map<String, String> parenthesis = new HashMap<String, String>();
+		
+		char ch = (char) 1 + '0';
+		System.out.println(ch);
 		parenthesis.put(")", "(");
 		parenthesis.put("}", "{");
 		parenthesis.put("]", "[");
 
 		System.out.println(isBalanced("({[]})", parenthesis));
-
+		
 	}
 
 }
