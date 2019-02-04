@@ -6,6 +6,8 @@ public class ComparatorsPractice {
 
 	public static void main(String[] args) {
 		ArrayList<String> al = new ArrayList<String>();
+		LinkedList<String> ll = new LinkedList<String>(al);
+		
 		al.add("ab");
 		al.add("c");
 		al.add("bc");
@@ -28,6 +30,13 @@ public class ComparatorsPractice {
 		Arrays.sort(a, (i,j) -> i -j);
 		
 		System.out.println(Arrays.deepToString(a));
+		
+		Collections.sort(al,new Comparator<String>(){
+
+            public int compare(String i , String j){
+                return 0;
+            }
+        });
 
 	}
 }

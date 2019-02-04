@@ -86,3 +86,9 @@ public class TwoSumUnsortedArray {
 
 	//AABBCCCCCBBAAD
 }
+
+/**
+ * 1. For the fixed index i , make sure you skip all the same values
+ * 2. When you either increment/ decrement j or k , make sure you reach a unique value and not the same value
+ * /
+ */

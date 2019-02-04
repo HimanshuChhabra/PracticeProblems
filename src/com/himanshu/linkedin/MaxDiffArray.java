@@ -49,7 +49,7 @@ public class MaxDiffArray {
 		return max;
 	}
 
-	// O(n) 1,2,3,6,4
+	// O(n) 1,2,3,6,4 // keeping track of the minimum element
 	static int maxDiff(int a[]) {
 		if (a == null || a.length <= 1)
 			return -1;

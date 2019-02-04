@@ -11,6 +11,9 @@ public class PathOfSum {
 
 	static LinkedList<Integer> stack = new LinkedList<>();
 	static int sum = 0;
+	
+	static List<List<Integer>> result = new ArrayList<List<Integer>>();
+	static LinkedList<Integer> path = new LinkedList<Integer>();
 
 	public static List<Integer> getSumPath(Node root, int value) {
 		if (root == null)
@@ -34,6 +37,27 @@ public class PathOfSum {
 		stack.pop();
 
 		return null;
+	}
+	
+	// Best my way DFS , Standard , find all the paths that have the sum kind of questions
+	static int count = 0;
+	public static void DFS(Node root, int sum, int target) {
+		path.add(root.data);
+		if (sum == target) {
+			result.add(path);
+			path = new LinkedList<Integer>(path);
+			path.removeLast();
+			count++;
+			return;
+		}
+		
+		if(root.leftNode != null)
+		DFS(root.leftNode, sum + root.leftNode.data, target);
+		
+		if(root.rightNode != null)
+		DFS(root.rightNode, sum + root.rightNode.data, target);
+
+		path.removeLast();
 	}
 
 	public static void main(String[] args) {
@@ -63,6 +87,10 @@ public class PathOfSum {
 
 		System.out.println(getSumPath(root, 80)); // prints any intermediate path
 		System.out.println(leafPath(root,90 )); // prints root to leaf
+		DFS(root, root.data, 80);
+		
+		System.out.println(result);
+		System.out.println(count);
 	}
 	
 	static int total = 0;

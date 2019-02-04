@@ -62,7 +62,7 @@ Implmented appraoch :
 Finding max 3 numbers will only give you the ans if all are positive
 But Since we have negative numbers also we can have the smallest two negative intergers
 eg: -4,-3,-2,-1,60 
--4*-2 to be bigger than -2*-1 when multiplied with 60.
+-4*-3 to be bigger than -2*-1 when multiplied with 60.
 
 Thus max of (num1 * num2 * num3) and (num1* min1 * min3)
 If you re doing sorting, if its ascending order,  index 0 and 1 will be smallest and last three indices will be largest.

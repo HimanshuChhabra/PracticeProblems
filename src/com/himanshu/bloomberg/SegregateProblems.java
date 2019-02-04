@@ -2,6 +2,15 @@ package com.himanshu.bloomberg;
 
 import java.util.Arrays;
 
+/**
+ *  1. Count then number of negative/ odd numbers
+ *  2. Let i point to the location of the next negative/odd number
+ *  3. Run a loop until i equals totals number of negatives/ odd number
+ *  4. Each iteration if the a[i] is -ve move i and j ahead
+ *  5. else swap i and j and increment j , this will keep updating the current value of i until swapped value is -ve/odd
+ * @author himanshuchhabra
+ *
+ */
 public class SegregateProblems {
 
 	public static void main(String[] args) {
@@ -12,6 +21,9 @@ public class SegregateProblems {
 		int arr2[] = {1,2,3,4,5,6,7,8 };
 		segregateEvenOdd(arr2);
 		System.out.println(Arrays.toString(arr2));
+		
+		StringBuilder s = new StringBuilder();
+		
 
 	}
 
@@ -55,7 +67,7 @@ public class SegregateProblems {
 				oddCount++;
 
 		// Run a loop until all
-		// negative numbers are
+		// odd numbers are
 		// moved to the beginning
 		int i = 0, j = i + 1;
 		while (i != oddCount) {

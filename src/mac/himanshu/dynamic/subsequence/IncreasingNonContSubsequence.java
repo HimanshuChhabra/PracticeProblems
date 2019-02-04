@@ -15,7 +15,7 @@ import java.util.*;
 public class IncreasingNonContSubsequence {
 	
 	static int path[] = null;
-	static int arr[] = {100,22,9,33,21,50,41,60,80};
+	static int arr[] = {10,9,2,5,3,7,101,18};
 	static int maxLengthIndex ;
 	public static void main(String[] args) {
 		path = new int[arr.length];

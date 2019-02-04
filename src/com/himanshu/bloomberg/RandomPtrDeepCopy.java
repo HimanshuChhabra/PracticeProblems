@@ -50,7 +50,7 @@ public class RandomPtrDeepCopy {
 			curr1 = curr1.next.next;
 		}
 
-		// seperating the lists
+		// separating the lists
 		RandomListNode old = head;
 		RandomListNode clone = head2;
 

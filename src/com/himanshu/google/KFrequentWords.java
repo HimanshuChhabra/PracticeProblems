@@ -14,6 +14,7 @@ public class KFrequentWords {
 	private static List<String> findKFrequentWords(String[] words, int k) {
 		Map<String, Integer> freq = new HashMap<String, Integer>();
 		List<String> result = new ArrayList<String>();
+
 		
 		if (words.length <= 0 || k <= 0)
 			return result;

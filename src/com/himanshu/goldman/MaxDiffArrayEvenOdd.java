@@ -1,5 +1,8 @@
 package com.himanshu.goldman;
 
+/**
+ * We just keep track of the smallest odd number
+ */
 import java.util.*;
 import java.util.stream.Collectors;
 
@@ -39,9 +42,9 @@ public class MaxDiffArrayEvenOdd {
 		// check from next index of first odd number
 		for (int i = minIndex + 1; i < a.size(); i++) {
 
-			if (a.get(i) % 2 == 0) {
+			if (a.get(i) % 2 == 0) {					// if even number calc the max difference
 				maxDiff = Math.max(maxDiff, a.get(i) - minElem);
-			} else if (a.get(i) % 2 != 0 && a.get(i) < minElem) {
+			} else if (a.get(i) % 2 != 0 && a.get(i) < minElem) {		// if odd number check if we get a smaller odd value
 				minElem = a.get(i);
 			}
 		}

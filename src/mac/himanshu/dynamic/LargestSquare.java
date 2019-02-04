@@ -1,13 +1,13 @@
 package mac.himanshu.dynamic;
 
 public class LargestSquare {
-
+  
 	public static void main(String[] args) {
 		int input[][] = { 
+						{ 1, 0, 1, 0, 0 }, 
+						{ 1, 0, 1, 1, 1 }, 
 						{ 1, 1, 1, 1, 1 }, 
-						{ 0, 1, 1, 1, 1 }, 
-						{ 0, 1, 1, 1, 1 }, 
-						{ 0, 1, 1, 1, 1 } 
+						{ 1, 0, 1, 1, 1 } 
 						};
 
 		int cache[][] = new int[input.length][input[0].length];
@@ -31,6 +31,7 @@ public class LargestSquare {
 		}
 
 		System.out.println(largestSquareSize);
+		
 	}
-
+	
 }

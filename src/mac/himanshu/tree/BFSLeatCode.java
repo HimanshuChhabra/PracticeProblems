@@ -51,6 +51,7 @@ public class BFSLeatCode {
 
 			List<Integer> childrenList = new ArrayList<Integer>();
 			List<TreeNode> childNodeList = new ArrayList<TreeNode>();
+			
 			for (TreeNode node : nodelist) {
 				if (node.left != null) {
 					childrenList.add(node.left.value);

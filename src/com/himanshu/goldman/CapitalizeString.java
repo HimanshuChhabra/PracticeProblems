@@ -21,6 +21,16 @@ public class CapitalizeString {
 			}
 		}
 		System.out.println(result);
+		test();
 	}
-
+	
+	public static void test() {
+		// https://stackoverflow.com/questions/46343616/how-can-i-convert-a-char-to-int-in-java
+		String str = "8";
+		System.out.println(Integer.MAX_VALUE + " - " + Integer.MIN_VALUE);
+		
+		if(str.charAt(0) >= 48 && str.charAt(0) <= 57) {
+			System.out.println("yes");
+		}
+	}
 }
